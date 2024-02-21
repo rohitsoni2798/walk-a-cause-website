@@ -1,0 +1,295 @@
+body {
+    margin: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Basic styling for the container */
+.container {
+    display: flex;
+    flex-direction: column;
+    /* Default to vertical layout for mobile */
+    height: 100vh;
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+}
+
+.hero {
+    height: 100vh;
+    background-color: #222;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #FAFAFA;
+    padding: 10px 100px; /* 10px top/bottom, 100px left/right */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-sizing: border-box; /* Include padding in total width */
+}
+
+nav .logo {
+    max-height: 72px; /* Set the maximum height for the logo */
+}
+
+nav .logo img {
+    max-height: 72px; /* Ensure the image fits within the max-height of the logo */
+}
+
+nav .nav-links {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav .nav-links a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav .btn-container {
+    margin-right: 0; /* Adjusted margin-right */
+}
+
+/* Optional: Add hover effect for links */
+nav .nav-links a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Optional: Style the button */
+nav button {
+    background-color: #EC398B;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    padding: 16px 32px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* heading-bars */
+.heading-bars {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #554CB9, #EC398B);
+}
+
+/* qualities */
+.four-parts {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: stretch;
+
+}
+
+.part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 40px;
+}
+
+.part-gender {
+    background-color: #40BFE8;
+}
+
+.part-health {
+    background-color: #F79E1F;
+}
+
+.part-climate {
+    background-color: #E61A64;
+}
+
+.part-education {
+    background-color: #A3CC38;
+}
+
+/* Styling for each bar */
+.bar {
+    flex-grow: 1;
+    transition: flex-grow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    background-color: #333;
+    /* Dark grey color for collapsed bars */
+    color: #fff;
+    /* Text color for better visibility */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.about-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+.about-us{
+    background-color: #40BFE8;
+    color: #fff;
+    padding: 0 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+.vision{
+    background-color: #A3CC38;
+}
+.mission{
+    background-color: #F79E1F;
+}
+
+/* footer */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Hover effect: expand on hover and change background color */
+.bar:hover {
+    flex-grow: 3;
+    /* Adjust the value as needed */
+    background-color: #ddd;
+    /* Light grey color on hover */
+}
+
+/* CTA button styling */
+.cta-button {
+    display: none;
+    text-decoration: none;
+    /* Hide the button by default */
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    padding: 16px 32px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.coming-soon {
+    display: none;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+/* Button hover effect */
+.bar:hover .cta-button {
+    display: block;
+    /* Show the button on hover */
+    background-color: #EC398B;
+}
+
+.bar:hover .coming-soon {
+    display: block;
+    /* Show the button on hover */
+    font-weight: bold;
+}
+
+
+/* timer */
+.progress-bar-container {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 100%;
+    background-color: #EC398B;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 1s linear;
+}
+
+.timebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.timer {
+    margin: 0 20px;
+}
+
+.progress-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    padding: 0 100px;
+    /* Add padding to the left and right */
+    box-sizing: border-box;
+    /* Include padding in total width */
+    transform: translateY(-50%);
+}
+
+.timer-info {
+    font-size: 20px;
+    color: white;
+}
+
+.timer-number {
+    font-size: 72px;
+    color: white;
+}
+
+.timer-text {
+    font-size: 14px;
+    color: white;
+    margin-top: 5px;
+    /* Add margin-top to separate from numbers */
+}
+
+/* Media query for screens larger than 768px (adjust as needed) */
+@media only screen and (min-width: 769px) {
+    .container {
+        flex-direction: row;
+        /* Switch to horizontal layout for larger screens */
+    }
+
+    .bar {
+        flex-grow: 1;
+        /* Reset flex-grow for larger screens */
+    }
+}
